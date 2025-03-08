@@ -1,7 +1,6 @@
 import ConfirmarAsistencia from "./components/ConfirmarAsistencia";
 import FechaLugar from "./components/FechaLugar";
 import Header from "./components/Header";
-import Galeria from "./components/Galeria";
 
 function App() {
   return (
@@ -16,15 +15,10 @@ function App() {
         <FechaLugar />
       </section>
 
-      <section className="h-screen snap-start">
-        <Galeria />
-      </section>
-
 
       <section className="h-screen snap-start">
         <ConfirmarAsistencia />
       </section>
-
       
     </div>
   );
