@@ -26,68 +26,62 @@ const FechaLugar = () => {
     window.open("https://www.google.com.ar/maps/place/Lavalle+3477,+T4000+San+Miguel+de+Tucum%C3%A1n,+Tucum%C3%A1n/@-26.8305032,-65.2547854,17z/data=!3m1!4b1!4m6!3m5!1s0x94225c92cd3f2165:0xacf94f8af5da1dd8!8m2!3d-26.8305032!4d-65.2522105!16s%2Fg%2F11kp8qvz1d?entry=ttu&g_ep=EgoyMDI1MDMwNC4wIKXMDSoASAFQAw%3D%3D", "_blank");
   };
   return (
-    <div 
-      className="relative w-full h-screen flex flex-col items-center justify-center font-[Poppins]  text-white text-center bg-cover bg-center" 
-      style={{ backgroundImage: `url(${plimplim})` }}
+    <div
+  className="relative w-full h-screen flex flex-col items-center justify-center font-[Poppins] text-white text-center bg-cover bg-center"
+  style={{ backgroundImage: `url(${plimplim})` }}
+>
+  {/* Overlay para mejorar la legibilidad */}
+  <div className="absolute inset-0 bg-black/10 flex flex-col items-center justify-center py-8 overflow-auto">
+    {/* Información de la fecha y hora del evento */}
+    <div className="mb-4 bg-black/40 p-4 rounded-lg shadow-lg w-11/12 max-w-lg sm:max-w-md lg:max-w-lg min-h-[100px] overflow-auto">
+      <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-yellow-400">Fecha y hora:</h2>
+      <p className="text-lg sm:text-xl md:text-2xl font-bold">
+        29 de Marzo de 2025 - 13:00 hs
+      </p>
+    </div>
+
+    {/* Información del lugar */}
+    <div
+      className="mb-4 bg-black/40 p-4 rounded-lg shadow-lg w-11/12 max-w-lg sm:max-w-md lg:max-w-lg min-h-[200px] overflow-auto"
+      data-aos-delay="200"
     >
-      {/* Overlay para mejorar la legibilidad */}
-      <div className="absolute inset-0 bg-black/10 flex flex-col items-center justify-center py-8">
-        {/* Información de la fecha y hora del evento */}
-        <div 
-          className="mb-8 bg-black/40 p-6 rounded-lg shadow-lg w-11/12 max-w-lg"
-        >
-          <h2 className="text-2xl md:text-3xl font-semibold text-yellow-400"> Fecha y hora:</h2>
-          <p className="text-2xl md:text-3xl font-bold">
-            29 de Marzo de 2025 - 13:00 hs
-          </p>
+      <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-yellow-400">Lugar del evento:</h2>
+      <p className="text-lg sm:text-xl md:text-2xl font-bold">
+        ¡Nos vemos en Black House, Lavalle 3477, San Miguel de Tucuman!
+      </p>
+      <button
+        onClick={handleComoLlegar}
+        className="bg-yellow-400 text-white py-3 px-8 rounded-lg font-bold text-lg sm:text-xl md:text-2xl mt-4 hover:bg-yellow-500 transition-all duration-300"
+      >
+        Cómo llegar
+      </button>
+    </div>
+
+    {/* Temporizador */}
+    <div className="bg-black/40 w-11/12 text-white p-6 rounded-2xl shadow-2xl max-w-lg sm:max-w-md lg:max-w-lg mx-auto min-h-[0] overflow-auto">
+      <h2 className="text-xl sm:text-2xl md:text-3xl text-yellow-400 font-semibold mb-4">Tiempo restante:</h2>
+      <div className="flex justify-center gap-4 sm:gap-6 md:gap-8 text-center">
+        <div className="bg-black/40 rounded-lg p-4 w-20 sm:w-24 md:w-28 h-20 sm:h-24 md:h-28 flex flex-col justify-center items-center shadow-xl">
+          <p className="text-lg sm:text-2xl md:text-3xl font-bold">{days}</p>
+          <p className="text-sm sm:text-lg md:text-xl font-medium">Días</p>
         </div>
-
-        {/* Información del lugar */}
-        <div 
-          className="mb-8 bg-black/40 p-6 rounded-lg shadow-lg w-11/12 max-w-lg"
-          data-aos-delay="200"
-        >
-          <h2 className="text-2xl md:text-3xl font-semibold text-yellow-400">Lugar del evento:</h2>
-          <p className="text-2xl md:text-3xl font-bold">
-            ¡Nos vemos en Black House, Lavalle 3477, San Miguel de Tucuman!
-          </p>
-          <button
-              onClick={handleComoLlegar}
-              className="bg-yellow-400 text-white py-3 px-8 rounded-lg font-bold text-xl mt-4 hover:bg-yellow-500 transition-all duration-300"
-            >
-              Cómo llegar
-            </button>
+        <div className="bg-black/40 rounded-lg p-4 w-20 sm:w-24 md:w-28 h-20 sm:h-24 md:h-28 flex flex-col justify-center items-center shadow-xl">
+          <p className="text-lg sm:text-2xl md:text-3xl font-bold">{hours}</p>
+          <p className="text-sm sm:text-lg md:text-xl font-medium">Horas</p>
         </div>
-
-        {/* Temporizador */}
-        <div 
-          className="bg-black/40 w-11/12 text-white p-8 rounded-2xl shadow-2xl max-w-lg mx-auto"
-        >
-          <h2 className="text-2xl sm:text-2xl text-yellow-400 font-semibold mb-4">Tiempo restante:</h2>
-          <div className="flex justify-center gap-2 md:gap-6 text-center">
-            <div className="bg-black/40 rounded-lg p-4 w-20 h-20 flex flex-col justify-center items-center shadow-xl">
-              <p className="text-3xl sm:text-4xl font-bold">{days}</p>
-              <p className="text-sm sm:text-base font-medium">Días</p>
-            </div>
-            <div className="bg-black/40 rounded-lg p-4 w-20 h-20 flex flex-col justify-center items-center shadow-xl">
-              <p className="text-3xl sm:text-4xl font-bold">{hours}</p>
-              <p className="text-sm sm:text-base font-medium">Horas</p>
-            </div>
-            <div className="bg-black/40 rounded-lg p-4 w-20 h-20 flex flex-col justify-center items-center shadow-xl">
-              <p className="text-3xl sm:text-4xl font-bold">{minutes}</p>
-              <p className="text-sm sm:text-base font-medium">Minutos</p>
-            </div>
-            <div className="bg-black/40 rounded-lg p-4 w-20 h-20 flex flex-col justify-center items-center shadow-xl">
-              <p className="text-3xl sm:text-4xl font-bold">{seconds}</p>
-              <p className="text-sm sm:text-base font-medium">Segundos</p>
-            </div>
-          </div>
+        <div className="bg-black/40 rounded-lg p-4 w-20 sm:w-24 md:w-28 h-20 sm:h-24 md:h-28 flex flex-col justify-center items-center shadow-xl">
+          <p className="text-lg sm:text-2xl md:text-3xl font-bold">{minutes}</p>
+          <p className="text-sm sm:text-lg md:text-xl font-medium">Minutos</p>
         </div>
-
-
-        
+        <div className="bg-black/40 rounded-lg p-4 w-20 sm:w-24 md:w-28 h-20 sm:h-24 md:h-28 flex flex-col justify-center items-center shadow-xl">
+          <p className="text-lg sm:text-2xl md:text-3xl font-bold">{seconds}</p>
+          <p className="text-sm sm:text-lg md:text-xl font-medium">Segundos</p>
+        </div>
       </div>
     </div>
+  </div>
+</div>
+
   );
 };
 
