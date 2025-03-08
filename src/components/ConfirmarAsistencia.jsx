@@ -16,7 +16,7 @@ const ConfirmarAsistencia = () => {
   return (
     <div className="relative w-full h-screen bg-cover bg-center flex items-center justify-center text-center bg-gray-900" style={{ backgroundImage: `url(${fondo})` }}>
       {/* Overlay oscuro para la imagen de fondo */}
-      <div className="absolute inset-0 bg-black/30"></div> {/* Fondo más oscuro */}
+      <div className="absolute inset-0 bg-black/10"></div> {/* Fondo más oscuro */}
 
       {/* Contenedor de la tarjeta */}
       <div className="relative z-10 w-full sm:w-3/4 md:w-2/3 lg:w-1/2 bg-gray-800/40 p-8 rounded-lg shadow-xl">

@@ -31,7 +31,7 @@ const FechaLugar = () => {
       style={{ backgroundImage: `url(${plimplim})` }}
     >
       {/* Overlay para mejorar la legibilidad */}
-      <div className="absolute inset-0 bg-black/30 flex flex-col items-center justify-center py-8">
+      <div className="absolute inset-0 bg-black/10 flex flex-col items-center justify-center py-8">
         {/* Información de la fecha y hora del evento */}
         <div 
           className="mb-8 bg-black/40 p-6 rounded-lg shadow-lg w-11/12 max-w-lg"
@@ -64,7 +64,7 @@ const FechaLugar = () => {
           className="bg-black/40 w-11/12 text-white p-8 rounded-2xl shadow-2xl max-w-lg mx-auto"
         >
           <h2 className="text-2xl sm:text-2xl text-yellow-400 font-semibold mb-4">Tiempo restante:</h2>
-          <div className="flex justify-center gap-6 text-center">
+          <div className="flex justify-center gap-2 md:gap-6 text-center">
             <div className="bg-black/40 rounded-lg p-4 w-20 h-20 flex flex-col justify-center items-center shadow-xl">
               <p className="text-3xl sm:text-4xl font-bold">{days}</p>
               <p className="text-sm sm:text-base font-medium">Días</p>

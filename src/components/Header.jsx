@@ -16,10 +16,10 @@ const Header = () => {
   return (
     <div className="relative w-full h-screen">
       <header
-        className="w-full h-screen bg-center relative bg-cover md:bg-contain"
+        className="w-full h-screen bg-center relative bg-cover md:bg-contain md:"
         style={{ backgroundImage: `url(${bruno})` }}
       >
-        <div className="h-full inset-0 bg-black/30 flex flex-col items-center text-white px-6 z-10">
+        <div className="h-full inset-0 bg-black/20 flex flex-col items-center text-white px-6 z-10">
           <div className="w-full text-center mt-10 mb-6" data-aos="fade-up">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-yellow-400 drop-shadow-lg mb-4 font-[Poppins]">
               ¡Bruno cumple 1 añito! 🎉
@@ -30,9 +30,9 @@ const Header = () => {
           </div>
 
           <div className="flex space-x-6 mb-10" data-aos="zoom-in">
-            <FaGift className="text-5xl text-yellow-400 hover:scale-110 hover:text-yellow-500 transition-all duration-300" />
-            <FaRegSmile className="text-5xl text-pink-400 hover:scale-110 hover:text-pink-500 transition-all duration-300" />
-            <FaMusic className="text-5xl text-blue-400 hover:scale-110 hover:text-blue-500 transition-all duration-300" />
+            <FaGift className=" text-4xl md:text-5xl text-yellow-400 hover:scale-110 hover:text-yellow-500 transition-all duration-300" />
+            <FaRegSmile className="text-4xl md:text-5xl text-pink-400 hover:scale-110 hover:text-pink-500 transition-all duration-300" />
+            <FaMusic className="text-4xl md:text-5xl text-blue-400 hover:scale-110 hover:text-blue-500 transition-all duration-300" />
           </div>
         </div>
       <div className="absolute bottom-24 w-full flex justify-center">
