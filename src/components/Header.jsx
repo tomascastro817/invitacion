@@ -1,5 +1,5 @@
 import {useEffect } from "react";
-import bruno from "../assets/bruno4.jpg";
+import bruno from "../assets/result_IMG_01962.JPEG";
 import "aos/dist/aos.css";
 import { FaGift, FaMusic, FaRegSmile } from "react-icons/fa";
 import AOS from "aos";
@@ -16,7 +16,7 @@ const Header = () => {
   return (
     <div className="relative w-full h-screen">
       <header
-        className="w-full h-screen bg-center relative bg-cover"
+        className="w-full h-screen bg-center relative bg-cover md:bg-contain"
         style={{ backgroundImage: `url(${bruno})` }}
       >
         <div className="h-full inset-0 bg-black/30 flex flex-col items-center text-white px-6 z-10">
